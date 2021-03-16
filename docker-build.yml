@@ -4,4 +4,4 @@ steps:
     inputs:
       repository: pocsharedpipelines'
       command: build
-      Dockerfile: app/Dockerfile
+      Dockerfile: Dockerfile
