@@ -1,20 +1,32 @@
-
-
 steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'npm install'
+
 - task: SonarCloudPrepare@1
   inputs:
-    SonarCloud: '$(sonarCloudEndpointName)'
-    organization: '$(sonarCloudOrganization)'
+    SonarCloud: 'SonarCloud'
+    organization: 'karsegri'
     scannerMode: 'CLI'
-    configMode: 'file'
-    # This sonar-project.properties file is usually placed at the root level of the repository. However, you can define your own path. 
-    # Read more about this file and its expected format : https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
-    configFile: 'sonar-project.properties' 
-    # Additional properties that will be passed to the scanner,
-    # Put one key=value per line, example:
-    # sonar.exclusions=**/*.bin
-    extraProperties: 
+    configMode: 'manual'
+    cliProjectKey: 'karsegri_pocsharedpipelines'
+    cliProjectName: 'pocsharedpipelines'
+    cliSources: '.'
 
-# Add your build task(s) here
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'npm run build.azure'
 
 - task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
+  displayName: 'SonarCloud'
