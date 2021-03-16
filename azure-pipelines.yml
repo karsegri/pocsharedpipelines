@@ -6,6 +6,12 @@
 trigger:
 - master
 
+variables:
+  sonarCloudEndpointName: 'SC'
+  sonarCloudOrganization: 'karsegri'
+  sonarCloudProjectKey: 'karsegri_pocsharedpipelines'
+  sonarCloudProjectName: 'pocsharedpipelines'
+
 jobs:
   - job: Linux
     pool:
