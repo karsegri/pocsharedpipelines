@@ -1,6 +1,6 @@
 steps:
-  - task: PowerShell@2
+  - task: NodeTool@0
     inputs:
       targetType: 'inline'
-     # script: 'mocha test --reporter mocha-junit-reporter'
-       script: 'npm test'
+      script: 'mocha test --reporter mocha-junit-reporter'
+      script: 'npm test'
