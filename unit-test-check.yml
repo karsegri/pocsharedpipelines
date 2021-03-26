@@ -6,4 +6,4 @@ steps:
  - task: NodeTool@0
     inputs:
       targetType: 'inline'
-      script: 'npm test
+      script: 'npm test'
