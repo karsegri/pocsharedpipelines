@@ -2,8 +2,4 @@ steps:
   - task: NodeTool@0
     inputs:
       targetType: 'inline'
-      script: 'mocha test --reporter mocha-junit-reporter'
- - task: NodeTool@0
-    inputs:
-      targetType: 'inline'
-      script: 'npm test'
+      script: mocha test --reporter mocha-junit-reporter
