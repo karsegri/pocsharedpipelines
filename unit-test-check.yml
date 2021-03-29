@@ -1,14 +1,19 @@
 steps:
   - task: PowerShell@2
-    displayName: Testing
-    inputs:
-      targetType: 'inline'
-      script: 'npm test'
-  - task: PowerShell@2
     displayName: Instaling mocha
     inputs:
       targetType: 'inline'
       script: 'npm install mocha'      
+  - task: PowerShell@2
+    displayName: Instaling mocha report
+    inputs:
+      targetType: 'inline'
+      script: 'npm install mocha-junit-reporter --save-dev'      
+  - task: PowerShell@2
+    displayName: Testing
+    inputs:
+      targetType: 'inline'
+      script: 'npm test'
   - task: PowerShell@2
     displayName: Creating report
     inputs:
