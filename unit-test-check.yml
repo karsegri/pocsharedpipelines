@@ -4,3 +4,8 @@ steps:
     inputs:
       targetType: 'inline'
       script: 'npm test'
+  - task: PowerShell@2
+    displayName: Creating report
+    inputs:
+      targetType: 'inline'
+      script: 'mocha test --reporter mocha-junit-reporter'
