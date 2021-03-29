@@ -18,4 +18,4 @@ steps:
     displayName: Creating report
     inputs:
       targetType: 'inline'
-      script: 'mocha test --reporter mocha-junit-reporter'
+      script: 'npx mocha test --reporter mocha-junit-reporter'
