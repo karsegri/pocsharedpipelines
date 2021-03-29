@@ -3,7 +3,6 @@ steps:
   displayName: Sonar executing
   inputs:
     versionSpec: '10.x'
-  displayName: 'Install Node.js'
 
 - task: SonarCloudPrepare@1
   inputs:
