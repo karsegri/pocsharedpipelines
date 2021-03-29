@@ -1,5 +1,6 @@
 steps:
 - task: NodeTool@0
+  displayName: Sonar executing
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'

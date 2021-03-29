@@ -1,5 +1,6 @@
 steps:
   - task: PowerShell@2
+    displayName: Compiling
     inputs:
       targetType: 'inline'
       script: 'npm install'
