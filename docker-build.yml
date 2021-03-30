@@ -3,8 +3,8 @@ steps:
     displayName: Build and push an image to container registry
     inputs:
       command: buildAndPush
-      repository: 'pocsharedpipelines.v1'
+      repository: 'pocsharedpipelines'
       dockerfile: '**/Dockerfile'
       containerRegistry: 'pocsharedacr'
       tags: |
-        $(tag)
+        v1
