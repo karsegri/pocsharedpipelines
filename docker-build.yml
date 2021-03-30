@@ -4,7 +4,7 @@ steps:
     inputs:
       command: buildAndPush
       repository: $(imageRepository)
-      dockerfile: $(dockerfilePath)
-      containerRegistry: $(pocsharedacr)
+      dockerfile: '**/Dockerfile'
+      containerRegistry: 'pocsharedacr'
       tags: |
         $(tag)
