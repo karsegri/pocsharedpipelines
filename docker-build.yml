@@ -5,6 +5,6 @@ steps:
       command: buildAndPush
       repository: $(imageRepository)
       dockerfile: $(dockerfilePath)
-      containerRegistry: $(dockerRegistryServiceConnection)
+      containerRegistry: $(pocsharedacr)
       tags: |
         $(tag)
