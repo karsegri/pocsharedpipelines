@@ -3,6 +3,7 @@ resources:
   - container: pocsharedpipelines
     image: ubuntu:18.04
 steps:
+  displayName: Running Docker 
 - script: echo "I can run inside the container (it starts by default)"
   target:
     container: pocsharedpipelines
