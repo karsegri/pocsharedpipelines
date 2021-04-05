@@ -15,4 +15,3 @@ jobs:
     - template: quality-check.yml 
     - template: unit-test-check.yml
     - template: docker-build.yml
-    - template: deploy-app.yml
