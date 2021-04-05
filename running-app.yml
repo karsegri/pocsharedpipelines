@@ -6,3 +6,18 @@ steps:
       containerRegistry: pocsharedacr
   - script: |
       docker run pocsharedpipelines.azurecr.io/pocsharedpipelines:v1
+  - task: PowerShell@2
+    displayName: Smoke test
+    inputs:
+      targetType: 'inline'
+      script: 'curl localhost:4000'
+
+  - task: Docker@2
+    displayName: Stop 
+    inputs:
+      command: login
+      containerRegistry: pocsharedacr
+  - script: |
+      docker stop pocsharedpipelines.azurecr.io/pocsharedpipelines:v1
+
+
