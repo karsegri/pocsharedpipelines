@@ -1,9 +1,0 @@
-steps: 
-  - script: echo "I can run inside the container (it starts by default)"
-    target:
-      container: pocsharedpipelines
-  - task: Docker@2
-    displayName: Running Docker 
-    inputs:
-      command: start
-      container: pocsharedpipelines
