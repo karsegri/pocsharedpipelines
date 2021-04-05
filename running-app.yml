@@ -5,4 +5,4 @@ steps:
       command: login
       containerRegistry: pocsharedacr
   - script: |
-      docker run pocsharedpipelines.azurecr.io/pocsharedpipelines/pocsharedpipelines:v1
+      docker run pocsharedpipelines.azurecr.io/pocsharedpipelines:v1
