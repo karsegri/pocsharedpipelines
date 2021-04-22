@@ -4,6 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 #Demo for WWWC Codes Medellin
+#DevOps Fundamentals
 
 trigger:
 - master
